@@ -9,12 +9,7 @@
 
 </head>
 <body>
-    <div class="max-w-7x1 mx-auto px-4">
-        {{--<h1>bienvenido a la pagina principal</h1>--}}
-        <x-alert>
-            aqui hay una alerta
-        </x-alert>
-    </div>
+        <h1>hola</h1>
 </body>
 </html>
 
