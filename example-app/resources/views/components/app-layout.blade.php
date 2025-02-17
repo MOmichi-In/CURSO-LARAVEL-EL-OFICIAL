@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <header>
 
     </header>
 
-    {{$slot}}
-
+    @yield('content')
 
     <footer>
 
