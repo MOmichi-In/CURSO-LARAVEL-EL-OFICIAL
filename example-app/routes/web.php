@@ -12,12 +12,20 @@ Route::get('/post/post-0', [PostController::class, 'create']);
 Route::get('/post/{post}', [PostController::class, 'show']);
 Route::get('prueba', function(){
     // $post = new Post;
-    // $post->title = 'Titulo de prueba 2';
-    // $post->content = 'Contenido de prueba 2';
-    // $post->categoria = 'Categoria de prueba 2';
-
+    // $post->title = 'titulo de prueba 3';
+    // $post->content = 'Contenido de prueba 3';
+    // $post->categoria = 'Categoria de prueba 3';
+    // $post->save();
     // añadir contenido a la base de datos sin tener que hacer sentencias MYSQL
+    
+    $post = Post::find(1);
 
+    // $post = Post::where('categoria', 'titulo de prueba 1')
+    // ->first(); 
+    // $post->categoria = 'desarrollo web';
+    // $post->save();
+    // actualizar registro
+    
     // $post = Post::orderBy('id', 'asc')
     // ->select('id', 'title', 'categoria')
     // ->take(2)
@@ -26,5 +34,6 @@ Route::get('prueba', function(){
     // $post = Post::find(1);
     // $post->delete();
 
-    // return $post;
+    // return $post->published_at->format('d-m-Y');
+    dd($post->is_active);
 });
