@@ -17,15 +17,15 @@ Route::get('prueba', function(){
     // $post->categoria = 'Categoria de prueba 3';
     // $post->save();
     // añadir contenido a la base de datos sin tener que hacer sentencias MYSQL
-    
-    $post = Post::find(1);
+
+    // $post = Post::find(1);
 
     // $post = Post::where('categoria', 'titulo de prueba 1')
-    // ->first(); 
+    // ->first();
     // $post->categoria = 'desarrollo web';
     // $post->save();
     // actualizar registro
-    
+
     // $post = Post::orderBy('id', 'asc')
     // ->select('id', 'title', 'categoria')
     // ->take(2)
@@ -35,5 +35,4 @@ Route::get('prueba', function(){
     // $post->delete();
 
     // return $post->published_at->format('d-m-Y');
-    dd($post->is_active);
 });
