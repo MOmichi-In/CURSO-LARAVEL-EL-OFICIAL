@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -25,10 +26,9 @@ class DatabaseSeeder extends Seeder
         // $user->email = 'momichis@gmail.com';
         // $user->password = bcrypt('12345678');
         // $user->save();
-
-        $this->call([
-            UserSeeder::class,
-            PostSeeder::class,
-        ]);  
+        
+        $this->call(UserSeeder::class); 
+        Post::factory(100)->create();
+        User::factory(10)->create();
     }
 }
