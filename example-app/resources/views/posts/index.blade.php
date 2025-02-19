@@ -11,3 +11,4 @@
     @endforeach
     </ul>       
 </x-app-layout>
+{{-- hola mundo como estas --}}
