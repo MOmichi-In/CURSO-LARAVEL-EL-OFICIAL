@@ -7,10 +7,14 @@ use App\Http\Controllers\PostController;
 use function Laravel\Prompts\select;
 
 Route::get('/', [HomeController::class, '_summon']);
-Route::get('/post', [PostController::class, 'index']);
-Route::get('/post/post-0', [PostController::class, 'create']);
-Route::get('/post/{post}', [PostController::class, 'show']);
-Route::get('prueba', function(){
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/create', [PostController::class, 'create']);
+Route::post('/posts', [PostController::class, 'store']);
+Route::get('/posts/{post}', [PostController::class, 'show']);
+Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
+Route::put('/posts/{post}', [PostController::class, 'update']);
+Route::delete('/posts/{post}', [PostController::class, 'destroy']);
+// Route::get('prueba', function(){
     // $post = new Post;
     // $post->title = 'titulo de prueba 3';
     // $post->content = 'Contenido de prueba 3';
@@ -35,4 +39,4 @@ Route::get('prueba', function(){
     // $post->delete();
 
     // return $post->published_at->format('d-m-Y');
-});
+// });

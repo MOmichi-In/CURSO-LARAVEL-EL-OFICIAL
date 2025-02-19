@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crear formulario</title>
-</head>
-<body>
+<x-app-layout>
+    <a href="/posts">volver a post</a>
     <h1>aqui se mostrara un formulario pra crear un nuevo post</h1>
-</body>
-</html>
+    <form action="/posts" method="POST">
+        @csrf
+        <label for="">
+            Titulo:
+            <input type="text" name="title">
+        </label>
+        <br>
+        <label for="">
+            Categoria:
+            <input type="text" name="category">
+        </label>
+        <br>
+        <label for="">
+            Contenido:
+            <textarea name="content" id="">
+                
+            </textarea>
+        </label>
+        <br>
+        <button>Crear</button>
+    </form>
+</x-app-layout>

@@ -9,25 +9,26 @@ class Post extends Model
 {
     use HasFactory;
     
-    // protected $table = 'posts';
-    // protected function title(): Attribute
-    // {
-    //     return Attribute::make(
-    //         set: function ($value) {
-    //             return strtolower($value);
-    //         },
-    //         get: function ($value) {
-    //             return ucfirst($value);
-    //         }
-    //     );
-    // }
+//     protected $table = 'posts';
+//     protected function title(): Attribute
+//     {
+//         return Attribute::make(
+//             set: function ($value) {
+//                 return strtolower($value);
+//             },
+//             get: function ($value) {
+//                 return ucfirst($value);
+//             }
+//         );
+//     }
 
-    // se hace el uso de un cast para definir el manejo de un tipo de dato en especifico
-    // protected function casts(): array {
-    //     return [
-    //         'published_at' => 'datetime',
-    //         'is_active' => 'boolean',
-    //     ];
+//     se hace el uso de un cast para definir el manejo de un tipo de dato en especifico
+//     protected function casts(): array {
+//         return [
+//             'published_at' => 'datetime',
+//             'is_active' => 'boolean',
+//         ];
 
-    // }
+//     }
+// }
 }
