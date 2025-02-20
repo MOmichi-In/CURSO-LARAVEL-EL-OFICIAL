@@ -11,7 +11,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('id', 'desc') 
-        ->get();
+        ->paginate(10);
+        //paginate(); tomara el valor de 15, es decir por default na paginacion debe llevar minimo 15 registros
         return view('posts.index',[ 
             'posts' => $posts   
         ]);
