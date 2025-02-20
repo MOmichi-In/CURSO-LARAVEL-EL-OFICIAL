@@ -1,9 +1,9 @@
 <x-app-layout>
-    <a href="/posts">
+    <a href="{{route('posts.index')}}">
         volver a posts
     </a>
     <h1>aqui se mostrara un formulario pra editar un post</h1>
-    <form action="/posts/{{$post->id}}" method="POST">
+    <form action="{{route('posts.update', $post)}}" method="POST">
         @csrf
 
         @method('PUT')

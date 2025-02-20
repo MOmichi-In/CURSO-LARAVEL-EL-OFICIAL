@@ -1,7 +1,7 @@
 <x-app-layout>
-    <a href="/posts">volver a post</a>
+    <a href="{{route('posts.index')}}">volver a post</a>
     <h1>aqui se mostrara un formulario pra crear un nuevo post</h1>
-    <form action="/posts" method="POST">
+    <form action="{{route('posts.index')}}" method="POST">
         @csrf
         <label for="">
             Titulo:
