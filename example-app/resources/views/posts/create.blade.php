@@ -9,6 +9,11 @@
         </label>
         <br>
         <label for="">
+            Slug:
+            <input type="text" name="slug">
+        </label>
+        <br>
+        <label for="">
             Categoria:
             <input type="text" name="category">
         </label>

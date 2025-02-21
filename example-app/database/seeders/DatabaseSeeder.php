@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         // $user->password = bcrypt('12345678');
         // $user->save();
         
+        // factory lo que hace es generar de forma aleatoria registros en la tabla definida en la base de datos, en este caso posts y users
         $this->call(UserSeeder::class); 
         Post::factory(100)->create();
         User::factory(10)->create();

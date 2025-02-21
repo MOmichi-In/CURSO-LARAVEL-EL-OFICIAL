@@ -11,7 +11,7 @@
     <header>
 
     </header>
-
+    {{-- //contenido variable --}}
     {{$slot}}
     
     <footer>

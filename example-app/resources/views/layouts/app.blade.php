@@ -7,12 +7,13 @@
     <title>@yield('title')</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     @stack('css')
+    {{-- con stack se juntan codigos en uno solo --}}
 </head>
 <body>
     <header>
 
     </header>
-
+    {{-- se usa para definir secciones de una plantilla y permitir que las vistas  hijas las reemplacen con su propio contenido --}}
     @yield('content')
 
     @stack('js')

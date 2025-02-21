@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('category');
             $table->longText('content');
             $table->timestamp('published_at')->nullable();
-            $table->boolean('is_active')->default(true);
+            $table->boolean( 'is_active')->default(true);
+            $table->string( 'slug')->unique();
             $table->timestamps();
         });
     }

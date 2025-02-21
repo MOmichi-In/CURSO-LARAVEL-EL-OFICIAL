@@ -7,7 +7,12 @@ use App\Http\Controllers\PostController;
 use function Laravel\Prompts\select;
 
 Route::get('/', [HomeController::class, '_summon'])->name('home');
+//resourse utilizado para que se armen automaticamente las rutas dependiendo de los metodos dentro de la clase que se encuentra en el controlador
 Route::resource('posts', PostController::class);
+Route::get('prueba', function(){
+    $post = Post::find(1);
+    return $post->published_at->diffForHumans();
+}); 
 // Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 // Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 // Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
