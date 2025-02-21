@@ -19,6 +19,13 @@ class Post extends Model
     public function getRouteKeyName(){
         return 'slug';
     }
+
+    protected $fillable = [
+        'title',
+        'slug',
+        'category',
+        'content',
+    ];
 // en este modelo interpreta de forma autonoma que existe una tabla en prular dentro de la base de datos.
 //     protected $table = 'posts';
 //     protected function title(): Attribute
